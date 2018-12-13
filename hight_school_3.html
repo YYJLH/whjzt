@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>青春谱写绿色</title>
+		<link rel="stylesheet" href="css/reset.css" />
+	</head>
+	<style type="text/css">
+		@keyframes young {
+			from {
+				width: 0;
+				height: 0;
+			}
+			to {
+				width: 85%;
+				height: 65%;
+			}
+		}
+		
+		.content {
+			width: 100%;
+			height: 100%;
+			background: url(img/logo_bg.jpg)no-repeat;
+			background-size: 100% 100%;
+			position: relative;
+		}
+		
+		.blackboard {
+			position: absolute;
+			width: 85%;
+			height: 80%;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			animation: young 0.8s linear alternate forwards;
+		}
+		
+		@keyframes move {
+			from {
+				left: 50%;
+			}
+			to {
+				left: 46%
+			}
+		}		
+		.write {
+			position: absolute;
+			width: 680px;
+			height: 338px;
+			top: 27%;
+			left: 50%;
+			transform: translateX(-50%);
+			animation: move 0.8s 0.5s linear infinite alternate;
+		}
+		.music {
+			width: 110px;
+			height: 110px;
+			position: absolute;
+			top: 26px;
+			right: 26px;
+		}
+	</style>
+
+	<body>
+		<div class="content">
+			<img class="music suspend" src="img/music.png" alt="" />
+			<img class="blackboard" src="img/blackboard.png" alt="" />
+			<img class="write scale" src="img/writee.png" alt="" />
+		</div>
+		<audio id="music" autoplay="autoplay">
+			<source src="111.mp3" />
+		</audio>
+	</body>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/music.js"></script>
+	<script>
+		$(function() {
+			setTimeout(function() {
+				window.location.href = "test_start_4.html"
+			}, 4000)
+		});
+	</script>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>点击进入测试</title>
+		<link rel="stylesheet" href="css/reset.css" />
+	</head>
+	<style type="text/css">
+		.container{
+			width: 100%;
+			height: 100%;
+			background: url(img/logo_bg.jpg)no-repeat;
+			background-size: 100% 100%;
+			position: relative;
+		}
+		.container p{
+			position: absolute;
+			width: 85%;
+			top: 20%;
+			left: 50%;
+			transform: translateX(-50%);
+			font-size: 69px;
+		}
+		.container .btn{
+			position: absolute;
+		    width: 40%;
+		    height: 8%;
+		    bottom: 26%;
+		    left: 50%;
+		    transform: translateX(-50%);
+		    font-size: 66px;
+		    background: #a87f51;
+		    outline: none;
+		    border-radius: 20px;
+		    border: none;	
+		}
+		.music {
+			width: 110px;
+			height: 110px;
+			position: absolute;
+			top: 26px;
+			right: 26px;
+		}
+	</style>
+	<body>
+		<div class="container">
+		<img class="music suspend" src="img/music.png" alt="" />
+			<p>《文化季来临，想知道你是哪类环保派系的教主么？》</p>	
+			<button class="btn">进入测试</button>
+		</div>
+		<audio id="music" autoplay="autoplay">
+			<source src="111.mp3" />
+		</audio>
+	</body>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/music.js"></script>
+	
+	<script type="text/javascript">
+		$('.btn').click(function(){
+			window.location.href = 'question_5.html'
+		});
+	</script>
+</html>
